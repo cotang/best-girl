@@ -1,0 +1,81 @@
+extends partials/templates/_template.pug
+
+block content
+  +b.page--search
+
+    // Sidebar
+    include partials/components/_sidebar.pug  
+
+    // Main
+    +b.MAIN.main
+
+      // Search advanced
+      +b.SECTION.search-advanced
+        +e.FORM.form(action='', method='')
+          +e.LABEL.label
+            +e.INPUT.input(type='text', name='Поиск', placeholder="Поиск по сайту")
+          +e.SELECT.select
+            option(selected='selected') По интересам
+            each val in ['автостоп', 'актерское мастерство', 'бизнес', 'видеосъёмка', 'визаж', 'вязание', 'гадание', 'диета', 'дружба', 'домохозяйство', 'здоровье', 'живопись', 'животные', 'искусство', 'йога', 'иностранные языки', 'карьера', 'кино', 'красота', 'кулинария', 'автостоп', 'актерское мастерство', 'бизнес', 'видеосъёмка', 'визаж', 'вязание', 'гадание', 'диета', 'дружба', 'домохозяйство', 'здоровье', 'живопись', 'животные', 'искусство', 'йога', 'иностранные языки', 'карьера', 'кино', 'красота', 'кулинария']
+              option= val
+          +b.BUTTON.btn(type='submit') Найти
+
+      // Search results
+      +b.SECTION.search-results
+        +e.heading 
+          +e.H3.title Результаты поиска по запросу "йога":
+          +e.amount Найдено 60 записей в блоге
+        +b.UL.list
+          +e.LI.item             
+            +e.H2.title 
+              +e.A.link(href='page.html') 1. Как правильно организовать занятия йогой и диету?
+            +e.date 12 мая 2017 г.
+          +e.LI.item             
+            +e.H2.title 
+              +e.A.link(href='page.html') 2. Совместимы ли йога и беременность?
+            +e.date 10 мая 2017 г.
+          +e.LI.item             
+            +e.H2.title 
+              +e.A.link(href='page.html') 3. Философия духа: йога и религия
+            +e.date 10 мая 2017 г.
+          +e.LI.item             
+            +e.H2.title 
+              +e.A.link(href='page.html') 4. Гармония тела: практика йоги
+            +e.date 9 мая 2017 г.
+          +e.LI.item             
+            +e.H2.title 
+              +e.A.link(href='page.html') 5. Как правильно организовать занятия йогой и диету?
+            +e.date 12 мая 2017 г.
+          +e.LI.item             
+            +e.H2.title 
+              +e.A.link(href='page.html') 6. Совместимы ли йога и беременность?
+            +e.date 10 мая 2017 г.
+          +e.LI.item             
+            +e.H2.title 
+              +e.A.link(href='page.html') 7. Философия духа: йога и религия
+            +e.date 10 мая 2017 г.
+          +e.LI.item             
+            +e.H2.title 
+              +e.A.link(href='page.html') 8. Гармония тела: практика йоги
+            +e.date 9 мая 2017 г.
+
+      // Pagination
+      +b.SECTION.pagination Страница
+        +e.UL.list
+          +e.item 
+            a(href="page.html") 1
+          +e.item 
+            a(href="page.html") 2
+          +e.item 
+            a(href="page.html") 3
+          +e.item 
+            a(href="page.html") 4
+          +e.item 
+            a(href="page.html") 5
+          +e.item 
+            a(href="page.html") 6
+
+
+
+
+

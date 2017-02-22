@@ -1,0 +1,56 @@
+extends partials/templates/_template.pug
+include partials/abstracts/mixins/_post.pug
+
+block content
+  +b.page--index
+    //- - var index = true
+
+    // Sidebar
+    include partials/components/_sidebar.pug  
+
+    // Main
+    +b.MAIN.main
+
+      // Promo
+      +b.SECTION.promo
+        +e.img 
+          img(src="img/promo.jpg", alt="promo-image", title="promo")
+            
+      // Sorting
+      +b.SECTION.sorting
+        +e.SPAN.text Все актуальные записи женского блога Best girl
+        +e.UL.list
+          +e.item 
+            a(href="javascript:void(0);") Популярное
+          +e.item--active
+            a(href="javascript:void(0);") По интересам
+          +e.item 
+            a(href="javascript:void(0);") Новые записи
+
+      // Articles
+      +b.articles
+        +post('Как правильно организовать занятия йогой и диету', '12 мая 2017г.', 'Александра Полякова', 'post1', ['йога', 'диета', 'здоровье', 'организм', 'девушка', 'фигура', 'медитация'])
+        +post('Основные правила диеты Дюкана', '9 мая 2017г.', 'Александра Полякова', 'post2', ['диета', 'здоровье', 'организм', 'фигура', 'дюкан'])
+        +post('Танцы как способ защиты от стресса', '8 мая 2017г.', 'Александра Полякова', 'post1', ['танцы', 'отдых', 'стресс', 'релаксация'])
+
+      // Pagination
+      +b.SECTION.pagination
+        +e.inner
+          +e.SPAN.page Страница
+          +e.UL.list
+            +e.item--active
+              a(href="page.html") 1
+            +e.item 
+              a(href="page.html") 2
+            +e.item 
+              a(href="page.html") 3
+            +e.item 
+              a(href="page.html") 4
+            +e.item 
+              a(href="page.html") 5
+            +e.item 
+              a(href="page.html") 6
+          +e.A.back(href="page.html") Вернуться в начало
+
+
+

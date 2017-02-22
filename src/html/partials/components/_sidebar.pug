@@ -1,0 +1,154 @@
+include ../abstracts/bemto/bemto.pug
+
++b.ASIDE.sidebar 
+
+  +b.main-info
+    // Logo
+    +e.img 
+      img(src="img/girl-icon.png", alt="girl-image", title="logo")
+    +e.H1.title Женский блог 
+      span о красоте, здоровье, увлечениях и образе жизни для девушек
+    +e.warning Блог для женской аудитории старше 18 лет
+    +b.A.btn--subscribe(href="page-subscribe.html") Подписаться 
+
+    +b.categories
+      +b.A.cat-hamburger(href="#")
+        span
+        | Рубрики блога
+      +e.H3.title Рубрики женского блога
+      +e.UL.list
+        +e.LI.item 
+          +e.A.link(href="page.html") Искусство и творчество
+            +e.counter 21
+          +b.UL.sub-categories
+            +e.LI.item
+              a(href='#') Актерское мастерство
+            +e.LI.item
+              a(href='#') Видеосъёмка
+            +e.LI.item
+              a(href='#') Фотосъёмка
+            +e.LI.item
+              a(href='#') Живопись
+            +e.LI.item
+              a(href='#') Современное искусство
+            +e.LI.item
+              a(href='#') Кино
+            +e.LI.item
+              a(href='#') Любительский театр
+            +e.LI.item
+              a(href='#') Мода
+            +e.LI.item
+              a(href='#') Музыка
+            +e.LI.item
+              a(href='#') Фотография
+            +e.LI.item
+              a(href='#') Экскурсии по музеям
+        +e.item 
+          +e.A.link(href="page.html") Семья и отношения
+            +e.counter 31
+          +b.UL.sub-categories
+            +e.LI.item
+              a(href='#') Дружба
+            +e.LI.item
+              a(href='#') Домашние животные
+            +e.LI.item
+              a(href='#') Уход за детьми
+            +e.LI.item
+              a(href='#') Общение
+        +e.item 
+          +e.A.link(href="page.html") Красота и здоровье
+            +e.counter 41
+          +b.UL.sub-categories
+            +e.LI.item
+              a(href='#') Визаж
+            +e.LI.item
+              a(href='#') Диета
+            +e.LI.item
+              a(href='#') Женское здоровье
+            +e.LI.item
+              a(href='#') Макияж
+            +e.LI.item
+              a(href='#') Солярий
+        +e.item 
+          +e.A.link(href="page.html") Религия и философия
+            +e.counter 21
+          +b.UL.sub-categories
+            +e.LI.item
+              a(href='#') Йога
+            +e.LI.item
+              a(href='#') Культурные традиции
+            +e.LI.item
+              a(href='#') Ценности
+        +e.item 
+          +e.A.link(href="page.html") Карьера и развитие
+            +e.counter 31
+          +b.UL.sub-categories
+            +e.LI.item
+              a(href='#') Бизнес
+            +e.LI.item
+              a(href='#') Домохозяйство
+            +e.LI.item
+              a(href='#') Иностранные языки
+            +e.LI.item
+              a(href='#') Кулинария
+            +e.LI.item
+              a(href='#') Личностный рост
+            +e.LI.item
+              a(href='#') Психология
+        +e.item 
+          +e.A.link(href="page.html") Спорт и отдых
+            +e.counter 41
+          +b.UL.sub-categories
+            +e.LI.item
+              a(href='#') Автостоп
+            +e.LI.item
+              a(href='#') Вязание
+            +e.LI.item
+              a(href='#') Комнатные растения
+            +e.LI.item
+              a(href='#') Настольные игры
+            +e.LI.item
+              a(href='#') Фитнес
+            +e.LI.item
+              a(href='#') Чтение книг
+            +e.LI.item
+              a(href='#') Танцы
+            +e.LI.item
+              a(href='#') Плавание
+            +e.LI.item
+              a(href='#') Отдых с друзьями
+            +e.LI.item
+              a(href='#') Оригами
+
+  +b.invitation
+    +e.H3.title Пригласить подругу в блог 
+    +e.FORM.form(action='', method='')
+      +e.LABEL.label
+        +e.INPUT.input(type='email', name='Email', placeholder="Укажите эл.почту")
+      +b.BUTTON.btn--invite(type='submit')
+        span Выслать приглашение
+
+
+  if samplePage
+    +b.similar-posts
+      +e.H3.title Записи по теме "йога"
+      +b.UL.list
+        +e.LI.item
+          +e.A.link(href='page.html') 
+            +e.H2.title Как правильно организовать занятия йогой и диету?
+            +e.date 12 мая 2017 г.
+        +e.LI.item
+          +e.A.link(href='page.html') 
+            +e.H2.title Совместимы ли йога и беременность?
+            +e.date 10 мая 2017 г.
+        +e.LI.item
+          +e.A.link(href='page.html') 
+            +e.H2.title Философия духа: йога и религия
+            +e.date 10 мая 2017 г.
+        +e.LI.item
+          +e.A.link(href='page.html') 
+            +e.H2.title Гармония тела: практика йоги
+            +e.date 9 мая 2017 г.
+
+
+

@@ -1,0 +1,23 @@
+.btn{
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #a9a9a9;
+  outline: none;
+  font-weight: bold;
+  border-radius: 2px; 
+  color: $text-dark-grey;
+  background-image: $grey-btn-gradient;
+  padding: 3px 10px;
+  margin: 0;
+  &:hover, &:focus, &:active{
+    text-decoration: none;
+  }
+
+  &--subscribe{
+    padding: 3px 15px;
+    @media (min-width: $screen-xl){
+      margin-bottom: 20px;
+    }
+  }
+}
+

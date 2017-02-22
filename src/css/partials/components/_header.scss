@@ -1,0 +1,152 @@
+.header{
+  background-color: $dark-grey;
+  &__inner{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    text-align: center;
+    @media (min-width: $screen-md){
+      align-items: center;
+    }
+    @media (min-width: $screen-xl){
+      width: $container-xl;
+      margin: 0 auto;
+      padding: 10px 0;
+    }
+  }
+  &__slogan{
+    flex-basis: 33.33%;
+    color: $grey;
+    font-size: 20px;
+    @media (min-width: $screen-md){
+      flex-basis: auto;
+    }
+    @media (min-width: $screen-md){
+      flex-basis: 24%;
+    }
+  }
+  &__nav{
+    flex-basis: 33.33%;
+    text-align: left;
+    order: -1;
+    @media (min-width: $screen-md){
+      order: initial;
+      flex-basis: auto;
+    }
+    @media (min-width: $screen-xl){
+      flex-grow: 1;
+    }
+  }
+  &__search{
+    flex-basis: 33.33%;
+    text-align: right;
+    @media (min-width: $screen-md){
+      flex-basis: auto;
+    }
+  }
+}
+
+.nav{
+  position: relative;
+  &__list{
+    width: 300%;
+    padding-left: 0;
+    list-style-type: none;
+    margin: 0;
+    background-color: $dark-grey;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    @media (min-width: $screen-md){
+      width: auto;
+      display: flex;
+      position: static;
+    }
+  }
+  &__link{
+    // text-transform: uppercase;
+    color: $text-white;
+    display: inline-block;
+    padding: 5px 10px;
+  }
+
+  &__hamburger{
+    display: block;
+    @media (min-width: $screen-md){
+      display: none;
+    }
+  }
+}
+
+.main-hamburger{
+  color: $grey;
+  display: block;
+  text-transform: uppercase;
+
+  span{
+    display: inline-block;
+    width: 16px;
+    height: 2px;
+    margin-right: .5em;
+    background-color: $grey;
+    position: relative;
+    bottom: 5px;
+
+    &:after, &:before{
+      content: "";
+      display: block;
+      width: 16px;
+      height: 2px;
+      background-color: $grey;
+    }
+    &:before{
+      transform: translateY(-5px);
+    }    
+    &:after{
+      transform: translateY(3px);
+    }    
+  }
+}
+
+
+.search{
+  &__label{
+    display: inline-block;
+    position: relative;
+    &:after{
+      content: '';
+      display: block;
+      margin-left: auto;
+      @include sprite($s-search);
+    }
+  }
+  &__input{
+    display: none;
+    position: absolute;
+    right: 30px;
+    bottom: -10px;
+    color: $grey;
+    background-color: $dark-grey;
+    padding: 8px 10px;    
+    border: 1px solid $grey;
+    outline: none;
+    &::-webkit-input-placeholder{
+      color: $grey;         
+    }       
+    &::placeholder{
+      color: $grey;         
+    }
+    &:focus::-webkit-input-placeholder{
+      color: transparent;         
+    }       
+    &:focus::placeholder{
+      color: transparent;         
+    } 
+
+    @media (min-width: $screen-xl){
+      display: block;
+    }
+  }
+}

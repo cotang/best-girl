@@ -1,0 +1,34 @@
+mixin post(title, date, author, img, tags)
+
+  +b.ARTICLE.post
+    +e.H3.title #{title}
+    +e.info
+      +b.date #{date}
+      +b.author Автор: 
+        span #{author}
+    +e.img 
+      img(src='img/'+img+'.jpg', alt=title, title=title)
+    +b.UL.post-tags
+      each val in tags
+        +e.LI.item
+          a(href='#')= val
+
+    +e.excerpt Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Аmet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+
+    +b.control-panel
+      +b.A.btn--more(href="page.html") Читать дальше
+      +b.functions 
+        +b.counters
+          +e.looks 101
+          +e.comments 12
+        +b.A.link(href="page.html") Комментировать
+        //- +e.UL.social-list
+        //-   +e.LI.item--vk
+        //-     a(href='#') 
+        //-   +e.LI.item--fb
+        //-     a(href='#') 
+        //-   +e.LI.item--instagram
+        //-     a(href='#') 
+        +b.A.like(href="javascript:void(0);") 
+          span Мне нравится
+

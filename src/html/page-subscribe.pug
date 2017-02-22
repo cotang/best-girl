@@ -1,0 +1,38 @@
+extends partials/templates/_template.pug
+
+block content
+  +b.page--subscribe
+
+    // Sidebar
+    include partials/components/_sidebar.pug  
+
+    // Main
+    +b.MAIN.main
+
+      // Subscribe
+      +b.SECTION.subscribe
+        +e.H1.title Подписка на блог
+        +e.text Заполните поля формы подписки и скоро вы сможете получать обновления блога. 
+        +e.FORM.form(action='', method='')
+          +e.LABEL.label
+            +e.INPUT.input(type='text', name='Имя', placeholder="Укажите ваше полное имя")
+          +e.LABEL.label
+            +e.INPUT.input(type='text', name='Фамилия', placeholder="Фамилия")
+          +e.LABEL.label--email
+            +e.INPUT.input(type='email', name='Email', placeholder="Электронная почта")
+          // Tags
+          +b.FIELDSET.subscribe-interests Интересы:
+            +e.H3.title Что вас интересует в блоге?
+            +e.UL.list
+              each val, index in ['автостоп', 'актерское мастерство', 'бизнес', 'видеосъёмка', 'визаж', 'вязание', 'гадание', 'диета', 'дружба', 'домохозяйство', 'здоровье', 'живопись', 'животные', 'искусство', 'йога', 'иностранные языки', 'карьера', 'кино', 'красота', 'кулинария', 'автостоп', 'актерское мастерство', 'бизнес', 'видеосъёмка', 'визаж', 'вязание', 'гадание', 'диета', 'дружба', 'домохозяйство', 'здоровье', 'живопись', 'животные', 'искусство', 'йога', 'иностранные языки', 'карьера', 'кино', 'красота', 'кулинария']
+                +e.item 
+                  +e.INPUT.input(type='checkbox', name= val, id='subscribe'+index)
+                  +e.LABEL.label(for='subscribe'+index)= val
+          +e.btn
+            +b.BUTTON.btn(type='submit') Отправить заявку 
+   
+
+
+
+
+

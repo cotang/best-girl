@@ -1,0 +1,66 @@
+include ../abstracts/bemto/bemto.pug
+
+// Footer
++b.FOOTER.footer
+  +e.inner
+    +b.copyright 
+      span Best Girl © Конкурс талантов для девушек. 
+      span Конкурсный сервис женских талантов.
+
+//- // Overlay
+//- +b.overlay
+//-   +e.bg
+//-   +e.form
+//-     +e.close(href="/")
+//-     // Form upload
+//-     +b.SECTION.form--upload
+//-       form(action='', method='')
+//-         +e.H3.title Расскажите свою историю успеха
+//-         .form-group.field-name.required
+//-           div Ваше имя*
+//-           +e.INPUT.input(type='text', name='Имя')
+//-           p.help-block Ошибка заполнения поля формы
+//-         .form-group.field-question
+//-           div Введите текст
+//-           +e.TEXTAREA.textarea(name='Текст')
+//-           p.help-block Ошибка заполнения поля формы
+//-         .form-group.field-upload
+//-           div Загрузите фото
+//-           +e.INPUT.input(type="file", accept="image/jpeg,image/png,image/gif", name='Фото')
+//-           p.help-block Ошибка заполнения поля формы
+//-         .form-group
+//-           +b.BUTTON.btn--red(type='submit') Отправить
+//-           p.help-block.help-block-success Ваша заявка отправлена
+//-     // Form application
+//-     +b.SECTION.form--application
+//-       form(action='', method='')
+//-         .form-group.field-name.required
+//-           div Ваше имя*
+//-           +e.INPUT.input(type='text', name='Имя')
+//-           p.help-block Ошибка заполнения поля формы
+//-         .form-group.field-tel.required
+//-           span Ваш телефон*
+//-           +e.INPUT.input(type='text', name='Телефон')
+//-           p.help-block Ошибка заполнения поля формы
+//-         .form-group.field-email.required
+//-           span Ваш email*
+//-           +e.INPUT.input(type='text', name='Email')
+//-           p.help-block Ошибка заполнения поля формы
+//-         .form-group
+//-           +b.BUTTON.btn--red(type='submit') Отправить
+//-           p.help-block.help-block-success Ваша заявка отправлена
+//-     // Form call
+//-     +b.SECTION.form--call
+//-       form(action='', method='')
+//-         .form-group.field-name.required
+//-           div Ваше имя*
+//-           +e.INPUT.input(type='text', name='Имя')
+//-           p.help-block Ошибка заполнения поля формы
+//-         .form-group.field-tel.required
+//-           span Ваш телефон*
+//-           +e.INPUT.input(type='text', name='Телефон')
+//-           p.help-block Ошибка заполнения поля формы
+//-         .form-group
+//-           +b.BUTTON.btn--red(type='submit') Отправить
+//-           p.help-block.help-block-success Ваша заявка отправлена
+

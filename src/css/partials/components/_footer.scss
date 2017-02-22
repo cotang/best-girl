@@ -1,0 +1,21 @@
+.footer{
+
+}
+
+.copyright{
+  padding: 10px 0;
+  text-align: center;
+  color: #8a8a8a;
+  font-size: 12px;
+  line-height: (26/12);
+  @media (min-width: $screen-md){
+    padding: 15px 0;
+  }
+
+  span:last-child{
+    display: none;
+    @media (min-width: $screen-md){
+      display: inline;
+    }
+  }
+}
