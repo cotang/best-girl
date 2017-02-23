@@ -1,0 +1,42 @@
+.similar-posts{
+  display: none;
+  @media (min-width: $screen-xl){
+    display: block;
+  }
+
+  &__title{
+    padding: 10px 20px;
+    margin: 0;
+    font-size: 15px;
+    font-weight: normal;
+  }
+  &__list{
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+    font-size: 13px;
+    line-height: (20/13);  
+  }
+  &__item{
+    // margin-bottom: 10px;
+  }
+  &__link{
+    padding: 5px 20px;
+    display: block;
+    color: $text-grey;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    &:hover, &:focus {
+      color: $red;
+      background-color: #d7d7d7;
+      border-top: 1px solid #c8c8c8;
+      border-bottom: 1px solid #c8c8c8;
+    }
+  }
+  &__subtitle{
+    margin: 0;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: (20/13);   
+  }
+}

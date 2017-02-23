@@ -1,9 +1,10 @@
 mixin comment(name, text, date, time)
 
   +b.ARTICLE.comment
-    +e.H3.person #{name}
+    +e.A.person(href="#") #{name}
     +e.text !{text}
-    +e.time Добавлено #{date} в #{time}
+    +e.time 
+      +e.SPAN.time-added Добавлено #{date} в #{time}
       +e.A.answer(href="#") Ответить на комментарий
 
 

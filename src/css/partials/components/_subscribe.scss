@@ -1,0 +1,185 @@
+.subscribe{
+  &__title{
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 17px;
+    @media (min-width: $screen-md){
+      font-size: 20px;
+    }
+    @media (min-width: $screen-xl){
+      text-align: left;
+      padding: 20px 20px 30px;
+      font-size: 24px;
+    }
+  }
+  &__text{
+    text-align: center;
+    padding: 10px 10px;
+    background-color: #eaeaea;
+    font-size: 13px;
+    @media (min-width: $screen-md){
+      text-align: left;
+      padding: 20px 20px 10px;
+      font-size: 15px;
+      line-height: (24/15);
+    }
+    @media (min-width: $screen-xl){
+      background-color: transparent;
+      margin-bottom: 10px;
+    }
+  }
+  &__form{
+    padding: 0 10px;
+    background-color: #eaeaea;
+    @media (min-width: $screen-md){
+      padding: 0 20px;
+    }
+    @media (min-width: $screen-xl){
+      background-color: transparent;
+    }
+  }
+  &__label{
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    @media (min-width: $screen-md){
+      margin-bottom: 10px;
+      max-width: 600px;
+    }
+    @media (min-width: $screen-xl){
+      max-width: initial;
+    }
+
+    &--email{
+      position: relative;
+      &:before{
+        content: '';
+        display: inline-block;
+        @include sprite($s-mail);
+        opacity: .8;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+      }
+    }
+  }
+  &__input{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #b0b0b0;
+    background-color: #fff;
+    color: $text-grey;
+    @media (min-width: $screen-xl){
+      font-size: 16px;
+      padding: 10px;
+    }
+
+    &::-webkit-input-placeholder{
+      color: $text-grey;         
+    }       
+    &::placeholder{
+      color: $text-grey;         
+    }
+    &:focus::-webkit-input-placeholder{
+      color: transparent;         
+    }       
+    &:focus::placeholder{
+      color: transparent;         
+    }
+  }
+  &__btn{
+    text-align: center;
+    border-top: 1px solid #ccc;
+    padding: 20px 0;
+    margin: 0 -10px;
+    @media (min-width: $screen-md){
+      margin: 0 -20px;
+      text-align: left;
+    }
+    .btn{
+      position: relative;
+      left: 40px;
+      font-weight: normal;
+      @media (min-width: $screen-xl){
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+  }
+}
+
+.subscribe-interests{
+  border: none;
+  margin: 0;
+  padding: 0;
+  &__title{
+    text-align: center;
+    margin: 0;
+    font-weight: normal;
+    color: $text-grey;
+    font-size: 15px;
+    line-height: (36/15);
+    border-bottom: 1px solid #ccc;
+    @media (min-width: $screen-md){
+      color: $text-dark-grey;
+      text-align: left;
+    }
+    @media (min-width: $screen-xl){
+      margin: 0 -20px;
+      padding: 0 20px;
+    }
+  }
+  &__list{
+    padding-left: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+    list-style-type: none;
+    columns: 2;
+    font-size: 13px;
+    // line-height: (28/13);
+    @media (min-width: $screen-md){
+      columns: 4;
+    }
+    @media (min-width: $screen-md){
+      font-size: 14px;
+    }
+  }
+  &__item{
+    margin-bottom: 5px;
+  }
+  &__input{
+    display: none;
+    &:checked{
+      ~ .subscribe-interests__label{
+        color: $red;
+        &:before{
+          display: block;
+        }
+      }
+    }
+  }
+  &__label{
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    &:before{
+      content: '';
+      display: inline-block;          
+      @include sprite($s-check);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      display: none;
+    }
+
+    &:hover, &:focus {
+      color: $red;
+      cursor: pointer;
+    }
+  }
+}

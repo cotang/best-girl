@@ -13,10 +13,11 @@
 }
 
 .main-info{
-  padding: 20px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   @media (min-width: $screen-md){
-    display: flex;
-    align-items: center;
     padding: 5px 20px;
   }
   @media (min-width: $screen-xl){
@@ -25,7 +26,38 @@
     padding: 5px 0;
   }
 
+  &__block{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    @media (min-width: $screen-md){
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+    @media (min-width: $screen-xl){
+      display: block;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    &--info{
+      padding: 10px 10px;
+      @media (min-width: $screen-md){
+        padding: 0;
+      }
+    }
+    &--buttons{
+      align-items: stretch;
+      border-bottom: 1px solid #fff;
+      @media (min-width: $screen-md){
+        border-bottom: none;
+      }
+    }
+  }
+
   &__img{
+    flex: 0 0 auto;
+    text-align: center;
     @media (min-width: $screen-md){
       width: 40px;
     } 
@@ -35,38 +67,39 @@
     }  
   }
   &__title{
-    padding: 0 40px;
+    padding-left: 10px;
     margin: 0;
+    font-weight: 100;
     font-weight: normal;
-    font-size: 20px;
-    line-height: (22/20);
+    font-size: 11px;
+    line-height: (14/11);    
     color: $text-dark-grey;
     @media (min-width: $screen-md){
-      max-width: 50%;
       padding: 0;
       margin-left: 10px;
-      font-size: 13px;
-      line-height: (18/13);      
+      font-size: 11px;
+      line-height: (16/11);      
     }
     @media (min-width: $screen-xl){
-      max-width: initial;
       text-align: center; 
-      font-size: 24px;
-      margin: 0; 
-      padding: 0 20px;   
+      font-size: 13px;
+      margin-left: 0;
+      padding: 0 20px; 
     }
 
     span{
-      display: block;
-      font-family: $font-family--light;
-      font-weight: normal;
-      font-size: 13px;
-      line-height: (18/13);
+      display: block;      
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 1;
       @media (min-width: $screen-md){
         display: inline;
+        font-size: 11px;
+        line-height: (16/11);
       }
       @media (min-width: $screen-xl){
         display: block;
+        font-size: 24px;
       }
     }
   }
@@ -75,26 +108,55 @@
     line-height: (20/9);
     color: $text-light-grey;
     margin-top: 5px;
-    margin-bottom: 10px;
+    
     @media (min-width: $screen-md){
       display: none;
     }
     @media (min-width: $screen-xl){
       display: block;
+      margin-bottom: 5px;
+    }
+  }
+  &__btn{
+    flex-basis: 50%;
+    text-align: center;
+    background-color: $grey;
+    border-right: 1px solid #fff;
+    @media (min-width: $screen-md){
+      background-color: transparent;
+      border-right: none;
+      flex-basis: auto;
+      background-image: initial;
+    }
+  }
+  &__link{
+    display: block;
+    line-height: 34px;    
+    color: $text-dark-grey;    
+    @media (min-width: $screen-md){
+      display: none;
+    }
+  }
+  .btn{
+    display: none;
+    @media (min-width: $screen-md){
+      display: inline-block;
     }
   }
 }
 
 .categories{
-  margin-top: 20px;
+  // margin-top: 20px;
   text-align: left;
   background-color: $grey;
   position: relative;
+  flex-basis: 50%;
   @media (min-width: $screen-md){
-    margin-top: 0;
+    // margin-top: 0;
     background-color: $light-grey;
     padding-left: 20px;
     flex-grow: 1;
+    flex-basis: auto;
   }
   @media (min-width: $screen-xl){
     padding: 0 20px;
@@ -118,11 +180,18 @@
     padding-left: 0;
     margin: 0;
     list-style-type: none;
+    position: absolute;
+    z-index: 1;
+    background-color: $grey;
+    width: 200%;
+    top: 100%;
+    right: 0;
+    border-top: 1px solid #fff;
+
     @media (min-width: $screen-md){
-      position: absolute;
-      top: 100%;
+      // top: 100%;
       right: -15px;
-      background-color: $light-grey;
+      background-color: #eaeaea;
       border: 1px solid $text-light-grey;
       width: 340px; /* не гуд, ну а что делать :( */
     }
@@ -182,8 +251,8 @@
   color: #424242;
   text-shadow: $text-shadow;
   display: block;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   @media (min-width: $screen-xl){
     display: none;
   }
@@ -218,6 +287,7 @@
 }
 
 .invitation{
+  display: none;
   padding: 15px 15px;
   color: $text-grey;
   @media (min-width: $screen-md){
@@ -225,13 +295,12 @@
     max-width: 100%;
     background-color: $white;
     padding: 15px 20px;
-    display: flex;
+    // display: flex;
     align-items: center;
   }
   @media (min-width: $screen-xl){
     display: block;
     background-color: $light-grey;
-    // border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
   }  
 
@@ -308,3 +377,4 @@
     }
   }
 }
+

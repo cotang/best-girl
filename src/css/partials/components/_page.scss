@@ -14,6 +14,199 @@
         text-align: left;
       }
     }
+
+    .main-info{
+      display: block;
+      @media (min-width: $screen-md){
+        display: flex;
+      }
+      &__block{
+        display: block;
+        @media (min-width: $screen-md){
+          display: flex;
+        }
+        @media (min-width: $screen-xl){
+          display: block;
+        }
+      }
+      &__title{
+        padding: 0 40px;
+        font-size: 13px;
+        line-height: (18/13);
+        @media (min-width: $screen-md){
+          padding: 0;
+          font-size: 11px;
+          line-height: (16/11);
+        }
+        @media (min-width: $screen-md){
+          padding: 0 20px;
+          font-size: 13px;
+        }
+
+        span{
+          font-size: 20px;
+          line-height: (22/20);
+          @media (min-width: $screen-md){
+            padding: 0; 
+            font-size: 11px;
+            line-height: (16/11);  
+          }
+          @media (min-width: $screen-xl){ 
+            font-size: 24px;
+          }
+        }
+      }
+      &__img{
+        margin-bottom: 5px;
+        @media (min-width: $screen-md){
+          margin-bottom: 0;  
+        }
+        @media (min-width: $screen-xl){
+          margin-bottom: 10px;  
+        }
+      }
+      &__btn{
+        flex-basis: 100%;
+      }
+      &__link{
+        display: none;
+      }
+      .btn{
+        display: inline-block;
+      }
+      .categories{
+        flex-basis: 100%;
+        margin-top: 20px;
+        @media (min-width: $screen-md){
+          margin-top: 0;  
+        }
+        &__list{
+          width: 100%;
+          @media (min-width: $screen-md){
+            width: 340px; /* не гуд, ну а что делать :( */
+          }
+          @media (min-width: $screen-xl){
+            width: auto;
+          }
+        }
+      }
+    }
+    .invitation{
+      display: block;
+      @media (min-width: $screen-md){
+        display: flex;
+      }
+      @media (min-width: $screen-xl){
+        display: block;
+      } 
+    }
+
+  }
+
+
+  &--sample{
+    .post-tags{
+      margin-left: -10px;
+      margin-right: -10px;
+      margin-top: -5px;
+      @media (min-width: $screen-md){
+        margin: 0;
+      }
+      @media (min-width: $screen-xl){
+        background-color: $white;
+      }
+    }
+    .post{
+      &__info{
+        padding-bottom: 0;
+      }
+      &__img{
+        @media (min-width: $screen-xl){
+          padding: 0;
+        }
+      }
+      &__tags{
+        @media (min-width: $screen-xl){
+          background-color: $white;
+          border-bottom: 1px solid #ccc;
+        }
+      }
+    }
+    .control-panel{
+      padding: 5px 10px;
+      background-color: #f0f0f0;
+      display: flex;
+      align-items: center;
+      @media (min-width: $screen-md){
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      @media (min-width: $screen-xl){
+        padding: 0 40px;
+        background-color: $white;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .date{
+        color: $text-light-grey;
+        font-size: 11px;
+        @media (min-width: $screen-md){
+          font-size: 13px;
+        }
+      }
+      .counters{
+        font-size: 13px;
+        @media (min-width: $screen-md){
+          color: $text-light-grey;
+        }
+      }
+      &__btn{
+        flex: 1 1 auto;
+        text-align: right;
+      }
+      .link{
+        display: inline-block;
+        &:before{
+          content: '';
+          display: inline-block;
+          vertical-align: bottom;
+          margin-left: auto;
+          @include sprite($s-up);
+          @media (min-width: $screen-md){
+            display: none;
+          } 
+        }
+
+        &:hover, &:focus {
+          background-color: initial;
+        }
+      }
+    }
+  }
+
+  &--subscribe{
+    .main-info{
+      &__link{
+        display: none;
+      }
+    }
+  }
+  
+  &--search{
+    .pagination{
+      padding: 5px 0;
+      &__inner{
+        @media (min-width: $screen-xl){
+          justify-content: flex-start;
+        } 
+      }
+      &__page{
+        @media (min-width: $screen-xl){
+          margin-right: 10px;
+        }
+      }
+    }
   }
 
 }
