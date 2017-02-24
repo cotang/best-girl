@@ -101,11 +101,14 @@
     }
     .btn{
       @include font-family('Roboto Regular', normal, normal);
+      @media (min-width: $screen-md){
+        position: relative;
+        left: 40px;
+      }      
       @media (min-width: $screen-xl){
         padding-left: 30px;
         padding-right: 30px;
-        position: relative;
-        left: 40px;
+
       }
     }
   }
