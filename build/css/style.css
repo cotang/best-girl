@@ -1731,8 +1731,6 @@ img {
 }
 
 .subscribe__btn .btn {
-  position: relative;
-  left: 40px;
   font-family: "Roboto Regular", sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -2634,6 +2632,8 @@ img {
   .subscribe__btn .btn{
     padding-left: 30px;
     padding-right: 30px;
+    position: relative;
+    left: 40px;
   }
   .subscribe-interests__title{
     margin: 0 -20px;
