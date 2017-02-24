@@ -3,7 +3,7 @@
   &__title{
     margin: 25px 0 15px;
     padding: 0 10px;
-    font-weight: bold;
+    @include font-family('Roboto Bold', normal, normal);
     font-size: 16px;
     line-height: (20/16);
     @media (min-width: $screen-md){
@@ -102,7 +102,7 @@
     }
 
     h1, h2, h3, h4, h5, h6{
-      font-weight: normal;
+      @include font-family('Roboto Regular', normal, normal);
       margin: 0;
     }
     h2, h3{
@@ -110,7 +110,7 @@
       @media (min-width: $screen-md){
         font-size: 20px;
         line-height: 1;
-        font-weight: bold;
+        @include font-family('Roboto Bold', normal, normal);
       }
     }
     h4, h5, h6{
@@ -141,7 +141,7 @@
 .author{
   color: $text-grey;
   span{
-    font-weight: bold;
+    @include font-family('Roboto Bold', normal, normal);
   }
 }
 .post-tags{
@@ -182,7 +182,7 @@
 
   .btn--more{
     width: 100%;
-    font-weight: normal;
+    @include font-family('Roboto Regular', normal, normal);
     @media (min-width: $screen-md){
       width: auto;
       padding: 5px 10px;
@@ -246,7 +246,7 @@
   line-height: (24/13);
   color: $text-grey;
   @media (min-width: $screen-md){
-    padding: 10px 20px;
+    padding: 5px 20px;
     border-right: 1px solid #ddd;
     border-left: 1px solid #ddd;
   }
@@ -322,7 +322,7 @@
     padding-left: 0;
     list-style-type: none;
     text-align: center;
-    font-weight: bold;
+    @include font-family('Roboto Bold', normal, normal);
     font-size: 15px;
     line-height: (26/15);
   }

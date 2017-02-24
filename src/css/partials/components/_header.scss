@@ -23,6 +23,7 @@
     }
     @media (min-width: $screen-md){
       flex-basis: 24%;
+      order: -2;
     }
     
     a{
@@ -33,8 +34,7 @@
     flex-basis: 33.33%;
     text-align: left;
     order: -1;
-    @media (min-width: $screen-md){
-      order: initial;
+    @media (min-width: $screen-md){      
       flex-basis: auto;
     }
     @media (min-width: $screen-xl){

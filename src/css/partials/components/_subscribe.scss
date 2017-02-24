@@ -3,7 +3,7 @@
     text-align: center;
     margin: 0;
     padding: 10px 0;
-    font-weight: bold;
+    @include font-family('Roboto Bold', normal, normal);
     font-size: 17px;
     @media (min-width: $screen-md){
       font-size: 20px;
@@ -102,7 +102,7 @@
     .btn{
       position: relative;
       left: 40px;
-      font-weight: normal;
+      @include font-family('Roboto Regular', normal, normal);
       @media (min-width: $screen-xl){
         padding-left: 30px;
         padding-right: 30px;
@@ -118,7 +118,7 @@
   &__title{
     text-align: center;
     margin: 0;
-    font-weight: normal;
+    @include font-family('Roboto Regular', normal, normal);
     color: $text-grey;
     font-size: 15px;
     line-height: (36/15);

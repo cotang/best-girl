@@ -17,7 +17,7 @@ body {
   margin: 0;
   background-color: $body-bg;
   color: $text-color;
-  font-family: $font-family;
+  @include font-family('Roboto Regular', normal, normal);
   font-size: $font-size;
   line-height: $line-height;
 }

@@ -3,7 +3,7 @@
   text-align: center;
   border: 1px solid #a9a9a9;
   outline: none;
-  font-weight: bold;
+  @include font-family('Roboto Bold', normal, normal);
   border-radius: 2px; 
   color: $text-dark-grey;
   background-image: $grey-btn-gradient;

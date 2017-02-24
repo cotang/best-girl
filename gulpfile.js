@@ -108,17 +108,18 @@ gulp.task('pug', function() {
 // Compilation sass
 gulp.task('sass', function () {
   return gulp.src(path.src.css)
-   .pipe(gulpif(devBuild, sourcemaps.init()))
     .pipe(plumber({ errorHandler: onError }))
+    .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'expanded'}))
     .pipe(postcss([
-      autoprefixer({browsers: ['last 3 version']}),
+      autoprefixer({browsers: ['last 5 version']}),
       mqpacker
     ]))
-    .pipe(gulp.dest(path.build.css))    
-    .pipe(cleancss())
+    .pipe(sourcemaps.write('/'))
+    .pipe(gulp.dest(path.build.css))
+    // .pipe(browserSync.create().stream())
     .pipe(rename('style.min.css'))
-    .pipe(gulpif(devBuild, sourcemaps.write()))
+    .pipe(cleancss())
     .pipe(gulp.dest(path.build.css))
     .pipe(reload({stream: true}));
 });

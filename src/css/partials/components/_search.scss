@@ -106,7 +106,7 @@
     }
   }
   &__title{
-    font-weight: normal;
+    @include font-family('Roboto Regular', normal, normal);
     margin: 0;
     font-size: 14px;
     line-height: (20/14);
@@ -127,7 +127,7 @@
     }
   }
   &__subtitle{
-    font-weight: normal;
+    @include font-family('Roboto Regular', normal, normal);
     margin: 0;
     font-size: 14px;
     @media (min-width: $screen-xl){
