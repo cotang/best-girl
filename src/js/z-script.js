@@ -7,14 +7,16 @@ jQuery(document).ready(function($){
   /* Hamburger main nav */
   $('.main-hamburger').click(function(e) { 
       e.preventDefault();
+      $('.search__input').hide();
       $(this).closest('.nav').find('.nav__list').toggle();
   });
 
   /* Search */
   if ($(window).width() < 1024) {
-    $('.search__label').click(function(e) { 
+    $('.loupe').click(function(e) { 
         e.preventDefault();
-        $(this).find('.search__input').toggle();
+        $('.nav__list').hide();
+        $(this).closest('.search__label').find('.search__input').toggle();
     });
   }
 
@@ -41,16 +43,16 @@ jQuery(document).ready(function($){
       $(this).siblings('.categories__list').slideToggle();
   });
 
+  /* плавный скролл наверх */
+  $('.up').click(function () {
+    $("html, body").animate({
+      scrollTop: 0
+    }, 600);
+    return false;
+  });
 
 
 
-  // /* плавный скролл наверх */
-  // $('.up').click(function () {
-  //   $("html, body").animate({
-  //     scrollTop: 0
-  //   }, 600);
-  //   return false;
-  // });
    
 
   /* 404 - sticky footer */

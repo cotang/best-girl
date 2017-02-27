@@ -1,24 +1,46 @@
 
-.post{  
+.post{ 
+  @media (min-width: $screen-xl){
+    padding-bottom: 20px;
+  } 
   &__title{
-    margin: 25px 0 15px;
-    padding: 0 10px;
+    padding: 25px 10px 15px;
+    margin: 0;
     @include font-family('Roboto Bold', normal, normal);
-    font-size: 16px;
+    font-size: 18px;
     line-height: (20/16);
     @media (min-width: $screen-md){
-      margin: 20px 0 10px;      
-      font-size: 24px;
+      padding: 20px 20px 10px;      
+      font-size: 20px;
       line-height: (24/20);
-      padding: 0 20px;
     }
     @media (min-width: $screen-xl){
-      padding: 0 40px;
+      font-size: 24px;
+      padding: 20px 40px 10px;
+    }
+
+    a{
+      color: inherit;
     }
   }
   &__img{
+    display: block;
     width: 100%;
     height: auto;
+    position: relative;
+    &:after{
+      content: '';
+      display: block;
+      @include sprite($s-warning-18);
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      opacity: .5;
+      @media (min-width: $screen-xl){
+        right: 60px;
+      }
+    }
+
     img{
       width: 100%;
       height: 100%;
@@ -183,7 +205,11 @@
   .btn--more{
     width: 100%;
     @include font-family('Roboto Regular', normal, normal);
+    margin-bottom: 5px;
+    font-size: 13px;
     @media (min-width: $screen-md){
+      font-size: 15px;
+      margin-bottom: 0;
       width: auto;
       padding: 5px 10px;
     }
@@ -204,6 +230,10 @@
     border: 1px solid #ddd;
     padding: 0 10px;
     align-items: stretch;
+  }
+
+  &__wrapper{
+    display: flex;
   }
 }
 .counters{

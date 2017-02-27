@@ -195,19 +195,19 @@
   }
   
   &--search{
-    .pagination{
-      padding: 5px 0;
-      &__inner{
-        @media (min-width: $screen-xl){
-          justify-content: flex-start;
-        } 
-      }
-      &__page{
-        @media (min-width: $screen-xl){
-          margin-right: 10px;
-        }
-      }
-    }
+    // .pagination{
+    //   padding: 5px 0;
+    //   &__inner{
+    //     @media (min-width: $screen-xl){
+    //       justify-content: flex-start;
+    //     } 
+    //   }
+    //   &__page{
+    //     @media (min-width: $screen-xl){
+    //       margin-right: 10px;
+    //     }
+    //   }
+    // }
   }
 
 }

@@ -1,7 +1,7 @@
 .header{
   background-color: $dark-grey;
   &__inner{
-    padding: 10px 20px;
+    padding: 7px 20px;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -12,7 +12,7 @@
     @media (min-width: $screen-xl){
       width: $container-xl;
       margin: 0 auto;
-      padding: 10px 0;
+      padding: 7px 0;
     }
   }
   &__slogan{
@@ -63,17 +63,24 @@
     z-index: 1;
     top: 100%;
     left: 0;
+    font-size: 16px;
     @media (min-width: $screen-md){
       width: auto;
       display: flex;
       position: static;
     }
+    @media (min-width: $screen-xl){
+      padding-left: 30px;
+    }
   }
   &__link{
-    // text-transform: uppercase;
     color: $text-white;
     display: inline-block;
     padding: 5px 10px;
+    &:hover, &:focus {
+      color: #c9c9c9;
+      background-color: #393939;
+    }
   }
 
   &__hamburger{
@@ -117,40 +124,56 @@
 
 .search{
   &__label{
-    display: inline-block;
+    display: block;
     position: relative;
-    &:after{
-      content: '';
-      display: block;
-      margin-left: auto;
-      @include sprite($s-search);
-    }
+    // &:hover, &:focus{
+    //   cursor: pointer;
+    // }
   }
   &__input{
     display: none;
     position: absolute;
-    right: 30px;
+    z-index: 1;
+    right: 0;
     bottom: -10px;
-    color: $grey;
-    background-color: $dark-grey;
-    padding: 8px 10px;    
-    border: 1px solid $grey;
+    width: 250px;
+    color: #666;
+    background-color: #262626;
+    padding: 8px 30px 8px 10px;    
+    border: 1px solid $text-grey;
     outline: none;
+    &:focus{
+      color: #fff; 
+      border: 1px solid #7c7c7c;
+    }    
     &::-webkit-input-placeholder{
-      color: $grey;         
+      color: #666;        
     }       
     &::placeholder{
-      color: $grey;         
+      color: #666;         
     }
-    &:focus::-webkit-input-placeholder{
-      color: transparent;         
-    }       
-    &:focus::placeholder{
-      color: transparent;         
-    } 
+    // &:focus::-webkit-input-placeholder{
+    //   color: #fff;       
+    // }       
+    // &:focus::placeholder{
+    //   color: #fff;        
+    // } 
 
     @media (min-width: $screen-xl){
       display: block;
     }
   }
+}
+
+.loupe{
+  background-color: transparent;
+  color: transparent;
+  border: none;
+  outline: none;
+  display: block;
+  margin-left: auto;
+  @include sprite($s-search);
+  position: relative;
+  right: 5px;
+  z-index: 2;
 }

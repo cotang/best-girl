@@ -5,12 +5,18 @@ include ../abstracts/bemto/bemto.pug
   +b.main-info
 
     +e.block--info
-      +e.img 
+      +e.A.img(href="index.html")
         img(src="img/girl-icon.png", alt="girl-image", title="logo")
-      +e.H1.title 
-        span Женский блог 
-        | о красоте, здоровье, увлечениях и образе жизни для девушек
-        +e.DIV.warning Блог для женской аудитории старше 18 лет
+      +e.text
+        if index
+          +e.H1.title 
+            span Женский блог 
+            | о красоте, здоровье, увлечениях и образе жизни для девушек
+        else
+          +e.H2.title 
+            span Женский блог 
+            | о красоте, здоровье, увлечениях и образе жизни для девушек
+        +e.warning Блог для женской аудитории старше 18 лет
 
     +e.block--buttons
       +e.btn
@@ -19,8 +25,8 @@ include ../abstracts/bemto/bemto.pug
       +b.categories
         +b.A.cat-hamburger(href="#")
           span
-          | Рубрики блога
-        +e.H3.title Рубрики женского блога
+          | Рубрики
+        +e.H2.title Рубрики женского блога
         +e.UL.list
           +e.LI.item 
             +e.A.link(href="page.html") Искусство и творчество

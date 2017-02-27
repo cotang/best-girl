@@ -11,10 +11,17 @@
   margin: 0;
   &:hover, &:focus, &:active{
     text-decoration: none;
+    background-image: none;
+    background-color: #c0c0c0;
+    text-shadow: 0 1px 2px #fff;
+    border: 1px solid #999;
   }
 
   &--subscribe{
     padding: 3px 15px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 13px;
     @media (min-width: $screen-xl){
       margin-bottom: 20px;
     }

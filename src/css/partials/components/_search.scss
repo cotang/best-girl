@@ -28,6 +28,7 @@
       @include sprite($s-search);
       opacity: .8;
       position: absolute;
+      z-index: 2;
       top: 50%;
       transform: translateY(-50%);
       right: 10px;
@@ -35,7 +36,10 @@
   }
   &__input{
     width: 100%;
-    padding: 5px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 10px;
+    padding-right: 35px;
     border: 1px solid #b0b0b0;
     background-color: #fff;
     color: $text-grey;
@@ -63,13 +67,14 @@
   }
   &__select{
     width: 100%;
-    padding: 5px;
+    padding: 8px;
     border: 1px solid #b0b0b0;
     background-color: #fff;
     color: $text-grey;
     margin-bottom: 5px;
     @media (min-width: $screen-md){
       margin-bottom: 0;
+      padding: 5px;
     }
     @media (min-width: $screen-xl){
       font-size: 16px;
@@ -78,6 +83,8 @@
   }
   .btn{
     width: 100%;
+    color: #666;
+    text-shadow: $text-shadow;
     @media (min-width: $screen-md){
       width: auto;
       padding-top: 3px;
@@ -115,9 +122,23 @@
     font-size: 12px;
     line-height: (20/12);
     color: $text-light-grey;
+    @media (min-width: $screen-md){
+      font-size: 15px;
+    }
+  }
+  &__list{
+    padding-right: 10px;
+    padding-left: 25px;
+    @media (min-width: $screen-md){
+      padding-left: 40px;
+    }
+    @media (min-width: $screen-xl){
+      padding-left: 55px;
+    }
   }
   &__item{
-    color: $text-grey;
+    padding-left: 3px;
+    color: $text-light-grey;
     margin-bottom: 10px;
     font-size: 14px;
     @media (min-width: $screen-xl){
@@ -135,17 +156,15 @@
       margin-bottom: 5px;
     }
   }
-  &__list{
-    padding-left: 55px;
-  }
   &__link{
-    color: $text-dark-grey;
+    color: #000000;
     &:hover, &:focus {
       color: $red;
     }
   }
   &__date{
     font-size: 11px;
+    color: #999;
     @media (min-width: $screen-md){
       font-size: 12px;
     }
