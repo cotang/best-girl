@@ -13656,7 +13656,7 @@ jQuery.Deferred = function( func ) {
 ;(function(window, document) {
   'use strict';
   var file = 'img/svg-sprite.svg', // путь к файлу спрайта на сервере
-      revision = 1;            // версия спрайта
+      revision = 2;            // версия спрайта
   if (!document.createElementNS || !document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect) return true;
   var isLocalStorage = 'localStorage' in window && window['localStorage'] !== null,
     request,
@@ -13702,14 +13702,16 @@ jQuery(document).ready(function($){
   /* Hamburger main nav */
   $('.main-hamburger').click(function(e) { 
       e.preventDefault();
+      $('.search__input').hide();
       $(this).closest('.nav').find('.nav__list').toggle();
   });
 
   /* Search */
   if ($(window).width() < 1024) {
-    $('.search__label').click(function(e) { 
+    $('.loupe').click(function(e) { 
         e.preventDefault();
-        $(this).find('.search__input').toggle();
+        $('.nav__list').hide();
+        $(this).closest('.search__label').find('.search__input').toggle();
     });
   }
 
@@ -13736,16 +13738,16 @@ jQuery(document).ready(function($){
       $(this).siblings('.categories__list').slideToggle();
   });
 
+  /* плавный скролл наверх */
+  $('.up').click(function () {
+    $("html, body").animate({
+      scrollTop: 0
+    }, 600);
+    return false;
+  });
 
 
 
-  // /* плавный скролл наверх */
-  // $('.up').click(function () {
-  //   $("html, body").animate({
-  //     scrollTop: 0
-  //   }, 600);
-  //   return false;
-  // });
    
 
   /* 404 - sticky footer */

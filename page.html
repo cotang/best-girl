@@ -25,16 +25,13 @@
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a class="nav__link" href="page.html">Женский блог</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="page.html">Интересы</a>
+                <a class="nav__link" href="index.html">Женский блог</a>
               </li>
               <li class="nav__item">
                 <a class="nav__link" href="page.html">Популярное</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="page.html">Подписка</a>
+                <a class="nav__link" href="page-subscribe.html">Подписка</a>
               </li>
             </ul>
             <div class="nav__hamburger">
@@ -49,6 +46,7 @@
             <form class="search__form" action="" method="">
               <label class="search__label">
                 <input class="search__input" type="text" name="Поиск" placeholder="Поиск по сайту" />
+                <button class="loupe" type="submit"></button>
               </label>
             </form>
           </section>
@@ -60,13 +58,14 @@
       <aside class="sidebar">
         <div class="main-info">
           <div class="main-info__block main-info__block--info">
-            <div class="main-info__img">
+            <a class="main-info__img" href="index.html">
               <img src="img/girl-icon.png" alt="girl-image" title="logo">
-            </div>
-            <h1 class="main-info__title">
-              <span>Женский блог </span>о красоте, здоровье, увлечениях и образе жизни для девушек
+            </a>
+            <div class="main-info__text">
+              <h2 class="main-info__title">
+                <span>Женский блог </span>о красоте, здоровье, увлечениях и образе жизни для девушек</h2>
               <div class="main-info__warning">Блог для женской аудитории старше 18 лет</div>
-            </h1>
+            </div>
           </div>
           <div class="main-info__block main-info__block--buttons">
             <div class="main-info__btn">
@@ -75,8 +74,8 @@
             </div>
             <div class="categories">
               <a class="cat-hamburger" href="#">
-                <span></span>Рубрики блога</a>
-              <h3 class="categories__title">Рубрики женского блога</h3>
+                <span></span>Рубрики</a>
+              <h2 class="categories__title">Рубрики женского блога</h2>
               <ul class="categories__list">
                 <li class="categories__item">
                   <a class="categories__link" href="page.html">Искусство и творчество
@@ -323,7 +322,7 @@
           <!-- Text-->
           <h3 class="post__title">Как правильно организовать занятия йогой и диету</h3>
           <div class="post__info">
-            <div class="date">12 мая 2017г.</div>
+            <div class="date">12 мая 2017 г.</div>
             <div class="author">Автор:
               <span>Александра Полякова</span>
             </div>
@@ -348,7 +347,7 @@
           </div>
           <div class="control-panel">
             <div class="date">
-              <span>Опубликовано: </span>12 мая 2017г.</div>
+              <span>Опубликовано: </span>12 мая 2017 г.</div>
             <div class="counters">
               <div class="counters__looks">101
                 <span>просмотров</span>
@@ -398,10 +397,7 @@
     <!-- Footer-->
     <footer class="footer">
       <div class="footer__inner">
-        <div class="copyright">
-          <span>Best Girl © Конкурс талантов для девушек. </span>
-          <span>Конкурсный сервис женских талантов.</span>
-        </div>
+        <div class="copyright">Best Girl © Женский блог о красоте, здоровье, увлечениях и образе жизни. </div>
       </div>
     </footer>
     <script src="js/script.min.js"></script>

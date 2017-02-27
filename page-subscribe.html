@@ -25,16 +25,13 @@
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a class="nav__link" href="page.html">Женский блог</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="page.html">Интересы</a>
+                <a class="nav__link" href="index.html">Женский блог</a>
               </li>
               <li class="nav__item">
                 <a class="nav__link" href="page.html">Популярное</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="page.html">Подписка</a>
+                <a class="nav__link" href="page-subscribe.html">Подписка</a>
               </li>
             </ul>
             <div class="nav__hamburger">
@@ -49,6 +46,7 @@
             <form class="search__form" action="" method="">
               <label class="search__label">
                 <input class="search__input" type="text" name="Поиск" placeholder="Поиск по сайту" />
+                <button class="loupe" type="submit"></button>
               </label>
             </form>
           </section>
@@ -60,13 +58,14 @@
       <aside class="sidebar">
         <div class="main-info">
           <div class="main-info__block main-info__block--info">
-            <div class="main-info__img">
+            <a class="main-info__img" href="index.html">
               <img src="img/girl-icon.png" alt="girl-image" title="logo">
-            </div>
-            <h1 class="main-info__title">
-              <span>Женский блог </span>о красоте, здоровье, увлечениях и образе жизни для девушек
+            </a>
+            <div class="main-info__text">
+              <h2 class="main-info__title">
+                <span>Женский блог </span>о красоте, здоровье, увлечениях и образе жизни для девушек</h2>
               <div class="main-info__warning">Блог для женской аудитории старше 18 лет</div>
-            </h1>
+            </div>
           </div>
           <div class="main-info__block main-info__block--buttons">
             <div class="main-info__btn">
@@ -75,8 +74,8 @@
             </div>
             <div class="categories">
               <a class="cat-hamburger" href="#">
-                <span></span>Рубрики блога</a>
-              <h3 class="categories__title">Рубрики женского блога</h3>
+                <span></span>Рубрики</a>
+              <h2 class="categories__title">Рубрики женского блога</h2>
               <ul class="categories__list">
                 <li class="categories__item">
                   <a class="categories__link" href="page.html">Искусство и творчество
@@ -262,176 +261,42 @@
           <form class="subscribe__form" action="" method="">
             <label class="subscribe__label">
               <input class="subscribe__input" type="text" name="Имя" placeholder="Укажите ваше полное имя" />
+              <div class="subscribe__error">Укажите ваше имя на русском языке</div>
             </label>
             <label class="subscribe__label">
               <input class="subscribe__input" type="text" name="Фамилия" placeholder="Фамилия" />
+              <div class="subscribe__error">Укажите вашу фамилию на русском языке</div>
             </label>
             <label class="subscribe__label subscribe__label--email">
               <input class="subscribe__input" type="email" name="Email" placeholder="Электронная почта" />
             </label>
             <!-- Tags-->
             <fieldset class="subscribe-interests">
-              <h3 class="subscribe-interests__title">Что вас интересует в блоге?</h3>
+              <h2 class="subscribe-interests__title">Укажите интересующие темы блога</h2>
               <ul class="subscribe-interests__list">
                 <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="автостоп" id="subscribe0" />
-                  <label class="subscribe-interests__label" for="subscribe0">автостоп</label>
+                  <input class="subscribe-interests__input" type="checkbox" name="Искусство и творчество" id="subscribe0" />
+                  <label class="subscribe-interests__label" for="subscribe0">Искусство и творчество</label>
                 </li>
                 <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="актерское мастерство" id="subscribe1" />
-                  <label class="subscribe-interests__label" for="subscribe1">актерское мастерство</label>
+                  <input class="subscribe-interests__input" type="checkbox" name="Семья и отношения" id="subscribe1" />
+                  <label class="subscribe-interests__label" for="subscribe1">Семья и отношения</label>
                 </li>
                 <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="бизнес" id="subscribe2" />
-                  <label class="subscribe-interests__label" for="subscribe2">бизнес</label>
+                  <input class="subscribe-interests__input" type="checkbox" name="Красота и здоровье" id="subscribe2" />
+                  <label class="subscribe-interests__label" for="subscribe2">Красота и здоровье</label>
                 </li>
                 <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="видеосъёмка" id="subscribe3" />
-                  <label class="subscribe-interests__label" for="subscribe3">видеосъёмка</label>
+                  <input class="subscribe-interests__input" type="checkbox" name="Религия и философия" id="subscribe3" />
+                  <label class="subscribe-interests__label" for="subscribe3">Религия и философия</label>
                 </li>
                 <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="визаж" id="subscribe4" />
-                  <label class="subscribe-interests__label" for="subscribe4">визаж</label>
+                  <input class="subscribe-interests__input" type="checkbox" name="Карьера и развитие" id="subscribe4" />
+                  <label class="subscribe-interests__label" for="subscribe4">Карьера и развитие</label>
                 </li>
                 <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="вязание" id="subscribe5" />
-                  <label class="subscribe-interests__label" for="subscribe5">вязание</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="гадание" id="subscribe6" />
-                  <label class="subscribe-interests__label" for="subscribe6">гадание</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="диета" id="subscribe7" />
-                  <label class="subscribe-interests__label" for="subscribe7">диета</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="дружба" id="subscribe8" />
-                  <label class="subscribe-interests__label" for="subscribe8">дружба</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="домохозяйство" id="subscribe9" />
-                  <label class="subscribe-interests__label" for="subscribe9">домохозяйство</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="здоровье" id="subscribe10" />
-                  <label class="subscribe-interests__label" for="subscribe10">здоровье</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="живопись" id="subscribe11" />
-                  <label class="subscribe-interests__label" for="subscribe11">живопись</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="животные" id="subscribe12" />
-                  <label class="subscribe-interests__label" for="subscribe12">животные</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="искусство" id="subscribe13" />
-                  <label class="subscribe-interests__label" for="subscribe13">искусство</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="йога" id="subscribe14" />
-                  <label class="subscribe-interests__label" for="subscribe14">йога</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="иностранные языки" id="subscribe15" />
-                  <label class="subscribe-interests__label" for="subscribe15">иностранные языки</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="карьера" id="subscribe16" />
-                  <label class="subscribe-interests__label" for="subscribe16">карьера</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="кино" id="subscribe17" />
-                  <label class="subscribe-interests__label" for="subscribe17">кино</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="красота" id="subscribe18" />
-                  <label class="subscribe-interests__label" for="subscribe18">красота</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="кулинария" id="subscribe19" />
-                  <label class="subscribe-interests__label" for="subscribe19">кулинария</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="автостоп" id="subscribe20" />
-                  <label class="subscribe-interests__label" for="subscribe20">автостоп</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="актерское мастерство" id="subscribe21" />
-                  <label class="subscribe-interests__label" for="subscribe21">актерское мастерство</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="бизнес" id="subscribe22" />
-                  <label class="subscribe-interests__label" for="subscribe22">бизнес</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="видеосъёмка" id="subscribe23" />
-                  <label class="subscribe-interests__label" for="subscribe23">видеосъёмка</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="визаж" id="subscribe24" />
-                  <label class="subscribe-interests__label" for="subscribe24">визаж</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="вязание" id="subscribe25" />
-                  <label class="subscribe-interests__label" for="subscribe25">вязание</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="гадание" id="subscribe26" />
-                  <label class="subscribe-interests__label" for="subscribe26">гадание</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="диета" id="subscribe27" />
-                  <label class="subscribe-interests__label" for="subscribe27">диета</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="дружба" id="subscribe28" />
-                  <label class="subscribe-interests__label" for="subscribe28">дружба</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="домохозяйство" id="subscribe29" />
-                  <label class="subscribe-interests__label" for="subscribe29">домохозяйство</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="здоровье" id="subscribe30" />
-                  <label class="subscribe-interests__label" for="subscribe30">здоровье</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="живопись" id="subscribe31" />
-                  <label class="subscribe-interests__label" for="subscribe31">живопись</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="животные" id="subscribe32" />
-                  <label class="subscribe-interests__label" for="subscribe32">животные</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="искусство" id="subscribe33" />
-                  <label class="subscribe-interests__label" for="subscribe33">искусство</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="йога" id="subscribe34" />
-                  <label class="subscribe-interests__label" for="subscribe34">йога</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="иностранные языки" id="subscribe35" />
-                  <label class="subscribe-interests__label" for="subscribe35">иностранные языки</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="карьера" id="subscribe36" />
-                  <label class="subscribe-interests__label" for="subscribe36">карьера</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="кино" id="subscribe37" />
-                  <label class="subscribe-interests__label" for="subscribe37">кино</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="красота" id="subscribe38" />
-                  <label class="subscribe-interests__label" for="subscribe38">красота</label>
-                </li>
-                <li class="subscribe-interests__item">
-                  <input class="subscribe-interests__input" type="checkbox" name="кулинария" id="subscribe39" />
-                  <label class="subscribe-interests__label" for="subscribe39">кулинария</label>
+                  <input class="subscribe-interests__input" type="checkbox" name="Спорт и отдых" id="subscribe5" />
+                  <label class="subscribe-interests__label" for="subscribe5">Спорт и отдых</label>
                 </li>
               </ul>
             </fieldset>
@@ -445,10 +310,7 @@
     <!-- Footer-->
     <footer class="footer">
       <div class="footer__inner">
-        <div class="copyright">
-          <span>Best Girl © Конкурс талантов для девушек. </span>
-          <span>Конкурсный сервис женских талантов.</span>
-        </div>
+        <div class="copyright">Best Girl © Женский блог о красоте, здоровье, увлечениях и образе жизни. </div>
       </div>
     </footer>
     <script src="js/script.min.js"></script>
