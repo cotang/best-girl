@@ -1840,7 +1840,7 @@ img {
 }
 
 .subscribe-interests__item {
-  margin-bottom: 5px;
+  line-height: 2.2em;
 }
 
 .subscribe-interests__input {
@@ -2143,6 +2143,7 @@ img {
   }
   .main-info .btn{
     display: inline-block;
+    visibility: hidden;
   }
   .categories{
     background-color: #eaeaea;
@@ -2456,9 +2457,6 @@ img {
     padding-top: 3px;
     padding-bottom: 4px;
   }
-  .search-advanced .btn{
-    padding: 8px 20px;
-  }
   .search-results__heading{
     padding-left: 20px;
     padding-right: 20px;
@@ -2535,6 +2533,9 @@ img {
   .main-info__warning{
     display: block;
     margin-bottom: 5px;
+  }
+  .main-info .btn{
+    visibility: visible;
   }
   .categories{
     padding: 0 20px;
@@ -2741,7 +2742,10 @@ img {
   }
   .search-advanced__select{
     font-size: 16px;
-    padding: 10px;
+    padding: 9px;
+  }
+  .search-advanced .btn{
+    padding: 8px 20px;
   }
   .search-results__heading{
     padding-left: 40px;
