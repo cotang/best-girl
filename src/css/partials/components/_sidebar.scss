@@ -145,6 +145,10 @@
     display: none;
     @media (min-width: $screen-md){
       display: inline-block;
+      visibility: hidden;
+    }
+    @media (min-width: $screen-xl){
+      visibility: visible;
     }
   }
 }
