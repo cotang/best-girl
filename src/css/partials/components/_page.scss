@@ -130,6 +130,9 @@
       &:hover, &:focus {
         &:before{
           display: block;
+          @media (min-width: $screen-md){
+            display: inline-block;
+          }
         }
       }
 

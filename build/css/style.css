@@ -2316,6 +2316,9 @@ img {
   .page--sample .post-tags{
     margin: 0;
   }
+  .page--sample .like:hover:before, .page--sample .like:focus:before{
+    display: inline-block;
+  }
   .page--sample .like:before{
     display: inline-block;
     margin-right: .3em;
@@ -2586,7 +2589,7 @@ img {
   }
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1120px){
   .header__inner{
     width: 1120px;
     margin: 0 auto;
