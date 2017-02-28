@@ -347,7 +347,15 @@
     &:before{
       content: '';
       display: inline-block;
-      @include sprite($s-mail);
+      vertical-align: baseline;
+      // @include sprite($s-mail);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(../img/svg/letter.svg);
+      width: 20px;
+      height: 20px;
+
       opacity: .8;
       position: absolute;
       top: 50%;
@@ -399,7 +407,13 @@
       content: '';
       display: block;
       margin-left: auto;
-      @include sprite($s-mail);
+      // @include sprite($s-mail);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(../img/svg/letter-grey.svg);
+      width: 20px;
+      height: 20px;
       @media (min-width: $screen-xl){
         display: none;
       }

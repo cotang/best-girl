@@ -20,11 +20,16 @@
     &:after{
       content: '';
       display: block;
-      @include sprite($s-warning-18);
+      // @include sprite($s-warning-18);
       position: absolute;
       top: 20px;
       right: 20px;
       opacity: .5;
+      // background-position: 0 0;
+      background-size: cover;
+      background-image: url(../img/svg/adult.svg);
+      width: 48px;
+      height: 33px;
     }
 
     img{

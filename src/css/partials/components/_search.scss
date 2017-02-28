@@ -25,7 +25,14 @@
     &:before{
       content: '';
       display: inline-block;
-      @include sprite($s-search);
+      // @include sprite($s-search);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(../img/svg/find.svg);
+      width: 19px;
+      height: 18px;
+
       opacity: .8;
       position: absolute;
       z-index: 2;
@@ -46,6 +53,7 @@
     @media (min-width: $screen-md){
       padding-top: 6px;
       padding-bottom: 6px;
+      height: 39px;
     }
     @media (min-width: $screen-xl){
       font-size: 16px;
@@ -75,6 +83,7 @@
     @media (min-width: $screen-md){
       margin-bottom: 0;
       padding: 5px;
+      height: 39px;
     }
     @media (min-width: $screen-xl){
       font-size: 16px;
@@ -85,10 +94,13 @@
     width: 100%;
     color: #666;
     text-shadow: $text-shadow;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
     @media (min-width: $screen-md){
       width: auto;
       padding-top: 3px;
       padding-bottom: 4px;
+      height: 39px;
     }
     @media (min-width: $screen-xl){
       padding: 8px 20px;

@@ -13656,7 +13656,7 @@ jQuery.Deferred = function( func ) {
 ;(function(window, document) {
   'use strict';
   var file = 'img/svg-sprite.svg', // путь к файлу спрайта на сервере
-      revision = 2;            // версия спрайта
+      revision = 5;            // версия спрайта
   if (!document.createElementNS || !document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect) return true;
   var isLocalStorage = 'localStorage' in window && window['localStorage'] !== null,
     request,

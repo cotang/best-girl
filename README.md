@@ -14,7 +14,7 @@
 ## Установка шаблона
 
 ``` sh
-$ git clone https://github.com/Enkil/template-frontend.git folder-name
+$ git clone https://github.com/cotang/template-frontend.git folder-name
 $ cd folder-name
 $ npm i -D
 $ bower i

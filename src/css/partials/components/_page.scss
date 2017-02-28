@@ -108,7 +108,7 @@
   &--sample{
     .post-tags{
       margin-left: -10px;
-      margin-right: -10px;
+      // margin-right: -10px;
       margin-top: -5px;
       @media (min-width: $screen-md){
         margin: 0;
@@ -117,11 +117,34 @@
         background-color: $white;
       }
     }
+    .like{ 
+      padding-left: 10px;
+           
+      &:before{
+        display: block;
+        margin: 0 auto;
+        width: 30px;
+        height: 30px;
+        @media (min-width: $screen-md){
+          display: inline-block;
+          margin-right: .3em;
+          width: 15px;
+          height: 14px;
+        }
+      }
+    }
+
     .post{
       &__info{
         padding-bottom: 0;
       }
       &__img{
+        &:before{
+          display: none;
+        }
+        &:after{
+          display: none;
+        }
         @media (min-width: $screen-xl){
           padding: 0;
         }
@@ -130,6 +153,12 @@
         @media (min-width: $screen-xl){
           background-color: $white;
           border-bottom: 1px solid #ccc;
+        }
+      }
+      &__tags-block{
+        border-right: 1px solid $grey;
+        @media (min-width: $screen-md){
+          border-right: none;
         }
       }
     }
