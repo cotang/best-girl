@@ -551,6 +551,7 @@ img {
 }
 
 .header__slogan a img {
+  display: block;
   max-height: 18px;
 }
 
