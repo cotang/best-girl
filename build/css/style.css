@@ -523,7 +523,7 @@ img {
 }
 
 .header__inner {
-  padding: 7px 20px;
+  padding: 10px 20px 7px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -2131,6 +2131,7 @@ img {
 
 @media (min-width: 768px){
   .header__inner{
+    padding: 7px 20px 7px;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
