@@ -56,13 +56,21 @@
           }
         }
       }
+      &__warning{
+        text-align: center;
+      }
       &__img{
+        width: 90px;
+        margin-right: auto;
+        margin-left: auto;
         margin-bottom: 5px;
         @media (min-width: $screen-md){
-          margin-bottom: 0;  
+          margin-bottom: 0; 
+          width: 40px;
         }
         @media (min-width: $screen-xl){
-          margin-bottom: 10px;  
+          margin-bottom: 10px;
+          width: auto;  
         }
       }
       &__btn{
@@ -219,6 +227,14 @@
     .main-info{
       &__link{
         display: none;
+      }
+      .btn{
+        @media (min-width: $screen-md){
+          visibility: hidden;
+        }
+        @media (min-width: $screen-xl){
+          visibility: visible;
+        }
       }
     }
   }

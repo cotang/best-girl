@@ -15,6 +15,9 @@
 .main-info{
   padding: 0;
   display: flex;
+  flex: 0 0 100%;
+  max-width: 100%;
+  flex-basis: 100%;
   flex-wrap: wrap;
   align-items: center;
   @media (min-width: $screen-md){
@@ -31,11 +34,13 @@
     width: 100%;
     @media (min-width: $screen-md){
       flex: 0 0 50%;
+      flex-basis: 50%;
       max-width: 50%;
     }
     @media (min-width: $screen-xl){
       display: block;
       flex: 0 0 100%;
+      flex-basis: 100%;
       max-width: 100%;
     }
 
@@ -55,6 +60,7 @@
   }
 
   &__img{
+    width: 72px;
     display: block;
     flex: 0 0 auto;
     text-align: center;
@@ -103,7 +109,8 @@
     }
   }
   &__warning{
-    text-align: center;
+    padding-left: 10px;
+    text-align: left;
     font-size: 9px;
     line-height: (20/9);
     color: $text-light-grey;
@@ -113,6 +120,8 @@
       display: none;
     }
     @media (min-width: $screen-xl){
+      padding-left: 0;
+      text-align: center;
       display: block;
       margin-bottom: 5px;
     }
@@ -145,10 +154,6 @@
     display: none;
     @media (min-width: $screen-md){
       display: inline-block;
-      visibility: hidden;
-    }
-    @media (min-width: $screen-xl){
-      visibility: visible;
     }
   }
 }

@@ -27,7 +27,13 @@
     }
     
     a{
+      display: block;
+      max-width: 90px;      
+      margin: 0 auto;
       color: $grey;
+      img{
+        max-height: 18px;
+      }
     }
   }
   &__nav{
