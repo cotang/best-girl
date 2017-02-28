@@ -866,6 +866,7 @@ img {
   padding-left: 0;
   margin: 0;
   list-style-type: none;
+  font-size: 14px;
 }
 
 .sub-categories__item a {
@@ -1146,6 +1147,10 @@ img {
 
 .page--sample .like {
   padding-left: 10px;
+}
+
+.page--sample .like:hover:before, .page--sample .like:focus:before {
+  display: block;
 }
 
 .page--sample .like:before {
@@ -1531,6 +1536,7 @@ img {
   display: inline-block;
   vertical-align: text-top;
   margin-right: 5px;
+  margin-top: 1px;
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url(../img/svg/comment.svg);
@@ -2525,9 +2531,6 @@ img {
     color: #333333;
     text-align: left;
   }
-  .subscribe-interests__list{
-    font-size: 14px;
-  }
   .search-advanced__form{
     padding: 10px 20px;
     display: -webkit-flex;
@@ -2840,6 +2843,9 @@ img {
   .subscribe-interests__title{
     margin: 0 -20px;
     padding: 0 20px;
+  }
+  .subscribe-interests__list{
+    font-size: 14px;
   }
   .search-advanced__form{
     background-color: #e1e1e1;

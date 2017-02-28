@@ -127,7 +127,12 @@
     }
     .like{ 
       padding-left: 10px;
-           
+      &:hover, &:focus {
+        &:before{
+          display: block;
+        }
+      }
+
       &:before{
         display: block;
         margin: 0 auto;
