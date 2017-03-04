@@ -132,7 +132,8 @@
 
 .search{
   &__label{
-    display: block;
+    display: flex;
+    justify-content: flex-end;
     position: relative;
     // &:hover, &:focus{
     //   cursor: pointer;
@@ -179,7 +180,7 @@
   border: none;
   outline: none;
   display: block;
-  margin-left: auto;
+  // margin-left: auto;
   @include sprite($s-search);
   position: relative;
   right: 5px;

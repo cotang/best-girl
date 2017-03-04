@@ -642,7 +642,12 @@ img {
 }
 
 .search__label {
-  display: block;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   position: relative;
 }
 
@@ -687,7 +692,6 @@ img {
   border: none;
   outline: none;
   display: block;
-  margin-left: auto;
   background-image: url(../img/png-sprite.png);
   background-position: -27px -35px;
   width: 19px;
