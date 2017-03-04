@@ -13715,7 +13715,7 @@ jQuery(document).ready(function($){
         if ($(window).width() < 768) {
           $('.nav__list').hide();
         }
-        $(this).closest('.search__label').find('.search__input').toggle();
+        $(this).closest('.search__label').find('.search__input').show();
     });
   }
 
