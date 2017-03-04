@@ -7,15 +7,19 @@ jQuery(document).ready(function($){
   /* Hamburger main nav */
   $('.main-hamburger').click(function(e) { 
       e.preventDefault();
-      $('.search__input').hide();
+      if ($(window).width() < 768) {
+        $('.search__input').hide();
+      }
       $(this).closest('.nav').find('.nav__list').toggle();
   });
 
   /* Search */
-  if ($(window).width() < 1024) {
+  if ($(window).width() < 1120) {
     $('.loupe').click(function(e) { 
         e.preventDefault();
-        $('.nav__list').hide();
+        if ($(window).width() < 768) {
+          $('.nav__list').hide();
+        }
         $(this).closest('.search__label').find('.search__input').toggle();
     });
   }
@@ -23,7 +27,7 @@ jQuery(document).ready(function($){
   $(window).resize(function(){
     if ($(window).width() >= 768) {
       $('.nav__list').show();
-    } else if ($(window).width() >= 1024) {
+    } else if ($(window).width() >= 1120) {
       $('.search__input').show();
     } else {
       $('.search__input').hide();
@@ -50,8 +54,6 @@ jQuery(document).ready(function($){
     }, 600);
     return false;
   });
-
-
 
    
 
